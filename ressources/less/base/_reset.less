@@ -1,0 +1,108 @@
+// Reset styles for modern browsers
+
+// Box sizing
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Document
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #fff;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  margin: 10px auto;
+  background-color: @bg;
+  border-radius: 8px;
+  padding:1rem;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+// Lists
+ul, ol {
+  list-style: none;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: inherit;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+// Images
+img, svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+// Form elements
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+// Remove default button styles
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Remove default fieldset styles
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Normalize monospace elements
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}

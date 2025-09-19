@@ -1,0 +1,86 @@
+.reciepe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .portion {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .button {
+            .button-all();
+        }
+        input[type="text"] {
+            width: 3rem;
+            padding: 0.25rem 0;
+            text-align: center;
+        }
+    }
+    .details {
+        display: flex;
+        flex-direction: row;
+        gap: 6rem;
+
+        .ingredients {
+            background-color: @bg_side;
+            border-radius: 15px;
+            width: 20%;
+            padding: 1rem;
+
+            .hr-details {
+                .custom-hr(@bg_port, 3px);
+                margin-bottom: 1rem;
+            }
+
+            table {
+                color: @misc3;
+                width: 100%;
+                tbody {
+                    tr {
+                        /* Abstand zwischen den Zeilen */
+                        td {
+                            padding-top: 8px; /* Abstand nach oben */
+                            padding-bottom: 8px; /* Abstand nach unten */
+                        }
+                    }
+
+                    td[id^="ingredient"] {
+                        text-align: left;
+                    }
+                    td[id^="ammount"] {
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .todo {
+            position: relative;
+            width: 80%;
+            color: @misc3;
+
+            .hr-todo {
+                .custom-hr(@bg_port, 3px);
+                margin-bottom: 1rem;
+            }
+
+            ol {
+                position: relative; /* Statt absolute */
+                margin-left: -2.2rem; /* Negative margin statt left */
+                list-style-type: decimal;
+
+                li {
+                    border-left: 5px solid @bg_port;
+                    p {
+                        padding: .75rem 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

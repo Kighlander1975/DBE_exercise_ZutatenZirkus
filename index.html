@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ZutatenZirkus - Drachenatem - V1</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>ZutatenZirkus</h1>
+                <hr class="header-hr" />
+                <h3>~ für alle die gern kochen ~</h3>
+            </header>
+            <main>
+                <div class="card">
+                    <h2>Drachenatem-Curry</h2>
+                    <div class="card-content">
+                        <p>
+                            Dieses Curry ist nicht nur für mutige Esser gemacht,
+                            sondern bringt dein Abendessen auf Hochtouren! Mit
+                            seiner pikanten Chili-Note und dem wärmenden Ingwer
+                            wird jeder Bissen zu einer explosiven
+                            Geschmacksreise. Das beste daran? Dein Atem wird so
+                            feurig sein, dass selbst Drachen neidisch werden
+                            würden! Perfekt für alle, die es ein bisschen hotter
+                            mögen - aber keine Angst: Die Kokosmilch sorgt
+                            dafür, dass das Feuer im richtigen Maß bleibt. Also,
+                            bereite dich auf einen kulinarischen Abenteuersprung
+                            in den Orient vor - aber lass niemanden zu nahe
+                            kommen, nachdem du davon probiert hast...
+                        </p>
+                    </div>
+                </div>
+                <div class="reciepe">
+                    <div class="portion">
+                        <button
+                            class="button"
+                            onclick="alert('Portionen: ' + document.getElementById('portions').value)"
+                        >
+                            Portionen
+                        </button>
+                        <input
+                            type="text"
+                            id="portions"
+                            value="4"
+                            onkeypress="if(event.key === 'Enter') alert('Portionen: ' + this.value)"
+                        />
+                    </div>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h4>Was Du brauchst:</h4>
+                            <hr class="hr-details" />
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td id="ingredient1">Huhn</td>
+                                        <td id="ammount1">1stk</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient2">Currypulver</td>
+                                        <td id="ammount2">10g</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient3">Kokosmilch</td>
+                                        <td id="ammount3">250ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient4">Ingwer</td>
+                                        <td id="ammount4">2ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient5">Zwiebel</td>
+                                        <td id="ammount5">1stk</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient6">Reis</td>
+                                        <td id="ammount6">200g</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient7">Zitronensaft</td>
+                                        <td id="ammount7">20ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ingredient8">Chili</td>
+                                        <td id="ammount8">0.5g</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="todo">
+                            <h4>So wird's gemacht</h4>
+                            <hr class="hr-todo" />
+                            <ol>
+                                <li>
+                                    <p>
+                                        Den Reis nach Packungsanweisung in
+                                        leicht gesalzenem Wasser weich kochen.
+                                        Abschöpfen und warm stellen.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        In einem großen Topf oder einer Pfanne
+                                        etwas Öl erhitzen (nicht im Rezept
+                                        aufgeführt, aber empfohlen: 1-2 EL ÖI).
+                                        Die fein gewürfelten Zwiebeln darin
+                                        glasig anschwitzen.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Das gewürfelte Huhn zur Zwiebeln geben
+                                        und von allen Seiten anbraten, bis es
+                                        eine goldbraune Farbe bekommt. Ingwer
+                                        und Chili hinzufügen: Den geriebenen
+                                        Ingwer sowie die fein gehackte
+                                        Chilischote zum Huhn geben und alles
+                                        kurz mitanschwitzen lassen. So entfaltet
+                                        sich der aromatische Duft!
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Das Currypulver einstreuen und gut unter
+                                        das Huhn mischen. Etwa 1 Minute...
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script></script>
+    </body>
+</html>

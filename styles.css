@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #fff;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  margin: 10px auto;
+  background-color: #fffaec;
+  border-radius: 8px;
+  padding: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:focus {
+  outline: none;
+}
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ced4da;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.5em;
+  margin-top: 0.67em;
+  color: #ea4b2f;
+}
+h2 {
+  font-size: 2em;
+  color: #ffffff;
+}
+h3 {
+  font-size: 1.75em;
+  color: #ced4da;
+}
+h4 {
+  font-size: 1.5em;
+  color: #526554;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 5px solid #eee;
+  font-style: italic;
+}
+code,
+pre {
+  font-family: monospace;
+  background-color: #f5f5f5;
+}
+code {
+  padding: 0.2em 0.4em;
+}
+pre {
+  padding: 1em;
+  margin: 1em 0;
+  overflow: auto;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-italic {
+  font-style: italic;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+h1,
+h3 {
+  text-align: center;
+}
+h1 {
+  margin-bottom: 0.25rem;
+}
+h3 {
+  color: black;
+  margin-top: 0.25rem;
+}
+.header-hr {
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid #aadcb0;
+  margin: 0.25rem 0;
+  padding: 0;
+  width: 100%;
+}
+.card {
+  background-color: #ff6b35;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+.card h2 {
+  text-align: center;
+}
+.card .card-content p {
+  background-color: #fffaec;
+  color: #000;
+  padding: 1rem;
+  width: 95%;
+  margin: 1rem auto;
+}
+.reciepe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.reciepe .portion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.reciepe .portion .button {
+  border-radius: 8px;
+  background-color: #aadcb0;
+  color: #000;
+  font-weight: bold;
+  padding: 1rem;
+}
+.reciepe .portion input[type="text"] {
+  width: 3rem;
+  padding: 0.25rem 0;
+  text-align: center;
+}
+.reciepe .details {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+}
+.reciepe .details .ingredients {
+  background-color: #f9f2de;
+  border-radius: 15px;
+  width: 20%;
+  padding: 1rem;
+}
+.reciepe .details .ingredients .hr-details {
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid #aadcb0;
+  margin: 0.25rem 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.reciepe .details .ingredients table {
+  color: #526554;
+  width: 100%;
+}
+.reciepe .details .ingredients table tbody tr {
+  /* Abstand zwischen den Zeilen */
+}
+.reciepe .details .ingredients table tbody tr td {
+  padding-top: 8px;
+  /* Abstand nach oben */
+  padding-bottom: 8px;
+  /* Abstand nach unten */
+}
+.reciepe .details .ingredients table tbody td[id^="ingredient"] {
+  text-align: left;
+}
+.reciepe .details .ingredients table tbody td[id^="ammount"] {
+  text-align: right;
+  font-weight: bold;
+}
+.reciepe .details .todo {
+  position: relative;
+  width: 80%;
+  color: #526554;
+}
+.reciepe .details .todo .hr-todo {
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid #aadcb0;
+  margin: 0.25rem 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.reciepe .details .todo ol {
+  position: relative;
+  /* Statt absolute */
+  margin-left: -2.2rem;
+  /* Negative margin statt left */
+  list-style-type: decimal;
+}
+.reciepe .details .todo ol li {
+  border-left: 5px solid #aadcb0;
+}
+.reciepe .details .todo ol li p {
+  padding: 0.75rem 0.5rem;
+}
