@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ZutatenZirkus - Drachenatem - V2</title>
+        <title>ZutatenZirkus - Drachenatem - V3</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
     <body>
@@ -35,15 +35,14 @@
                 </div>
                 <div class="reciepe">
                     <div class="portion">
-                        <button class="button" onclick="updatePortions()">
-                            Portionen
-                        </button>
-                        <input
-                            type="text"
-                            id="portions"
-                            value="4"
-                            onkeypress="if(event.key === 'Enter') {event.preventDefault(); updatePortions();}"
-                        />
+                        <form id="portionsForm" onsubmit="return false;">
+                            <input
+                                type="submit"
+                                class="button"
+                                value="Portionen"
+                            />
+                            <input type="text" id="portions" value="4" />
+                        </form>
                     </div>
                     <div class="details">
                         <div class="ingredients">
@@ -131,11 +130,59 @@
             </main>
         </div>
         <script>
+            // Warte, bis das DOM vollständig geladen ist
+            document.addEventListener("DOMContentLoaded", function () {
+                // Formular-Element auswählen
+                const portionsForm = document.getElementById("portionsForm");
+
+                // Event-Listener für das Absenden des Formulars hinzufügen
+                portionsForm.addEventListener("submit", function (event) {
+                    // Standardverhalten des Formulars verhindern (kein Neuladen der Seite)
+                    event.preventDefault();
+
+                    // Funktion zur Berechnung aufrufen
+                    updatePortions();
+                });
+            });
+
             function updatePortions() {
-                const portionsMenge = parseInt(document.getElementById("portions").value);
+                const meinInput = document.getElementById("portions");
+                const portionsInput = meinInput.value;
+
+                // Prüfen, ob der Eingabewert eine Dezimalzahl enthält
+                if (
+                    portionsInput.includes(".") ||
+                    portionsInput.includes(",")
+                ) {
+                    setTimeout(function () {
+                        alert(
+                            "Ungültige Angaben bei Portionen. Bitte geben Sie nur ganze Zahlen ein."
+                        );
+                        setTimeout(function () {
+                            meinInput.focus();
+                            meinInput.select();
+                        }, 0);
+                    }, 0);
+                    return;
+                }
+
+                const portionsMenge = parseInt(portionsInput);
+
+                // Restliche Prüfungen
+                if (portionsMenge <= 0 || isNaN(portionsMenge)) {
+                    setTimeout(function () {
+                        alert("Ungültige Angaben bei Portionen");
+                        setTimeout(function () {
+                            meinInput.focus();
+                            meinInput.select();
+                        }, 0);
+                    }, 0);
+                    return;
+                }
+
+                // Rest der Funktion...
                 const zutatenMenge = 200;
                 var berechneteMenge = portionsMenge * zutatenMenge;
-
                 console.log("Berechnete Portionsmenge: " + berechneteMenge);
             }
         </script>
