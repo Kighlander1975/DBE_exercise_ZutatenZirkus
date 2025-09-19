@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ZutatenZirkus - Drachenatem - V1</title>
+        <title>ZutatenZirkus - Drachenatem - V2</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
     <body>
@@ -35,17 +35,14 @@
                 </div>
                 <div class="reciepe">
                     <div class="portion">
-                        <button
-                            class="button"
-                            onclick="alert('Portionen: ' + document.getElementById('portions').value)"
-                        >
+                        <button class="button" onclick="updatePortions()">
                             Portionen
                         </button>
                         <input
                             type="text"
                             id="portions"
                             value="4"
-                            onkeypress="if(event.key === 'Enter') alert('Portionen: ' + this.value)"
+                            onkeypress="if(event.key === 'Enter') {event.preventDefault(); updatePortions();}"
                         />
                     </div>
                     <div class="details">
@@ -133,6 +130,14 @@
                 </div>
             </main>
         </div>
-        <script></script>
+        <script>
+            function updatePortions() {
+                const portionsMenge = parseInt(document.getElementById("portions").value);
+                const zutatenMenge = 200;
+                var berechneteMenge = portionsMenge * zutatenMenge;
+
+                console.log("Berechnete Portionsmenge: " + berechneteMenge);
+            }
+        </script>
     </body>
 </html>
