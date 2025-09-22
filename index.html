@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ZutatenZirkus - Drachenatem - V4</title>
+        <title>ZutatenZirkus - Drachenatem - V5</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
     <body>
@@ -211,11 +211,6 @@
                     return;
                 }
 
-                // Rest der Funktion...
-                const zutatenMenge = 200;
-                var berechneteMenge = portionsMenge * zutatenMenge;
-                console.log("Berechnete Portionsmenge: " + berechneteMenge);
-
                 let ausgabe = "";
                 for (let i = 0; i < ingredients.length; i++) {
                     if( units[i] === "Stk") {
@@ -227,6 +222,7 @@
                     console.log(ausgabe);
                 }
             }
+            // Anmerkung: Ich habe lediglich die Ausgabe der einfachen Mengen-/Portionsberechnung entfernt, da die Aufgabe in V4 bereits korrekt gelöst wurde
         </script>
     </body>
 </html>
