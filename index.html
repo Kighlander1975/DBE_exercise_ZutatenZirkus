@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ZutatenZirkus - Drachenatem - V3</title>
+        <title>ZutatenZirkus - Drachenatem - V4</title>
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
     <body>
@@ -148,6 +148,37 @@
             function updatePortions() {
                 const meinInput = document.getElementById("portions");
                 const portionsInput = meinInput.value;
+                // Zutatenarrays
+                const ingredients = [
+                    "Huhn",
+                    "Currypulver",
+                    "Kokosmilch",
+                    "Ingwer",
+                    "Zwiebel",
+                    "Reis",
+                    "Zitronensaft", 
+                    "Chili"
+                ];
+                const units = [
+                    "Stk",
+                    "g",
+                    "ml",
+                    "ml",
+                    "Stk",
+                    "g",
+                    "ml",
+                    "g"
+                ];
+                const quantityPerOne = [
+                    1,
+                    10,
+                    250,
+                    2,
+                    1,
+                    200,
+                    20,
+                    0.5,
+                ];
 
                 // Prüfen, ob der Eingabewert eine Dezimalzahl enthält
                 if (
@@ -184,6 +215,17 @@
                 const zutatenMenge = 200;
                 var berechneteMenge = portionsMenge * zutatenMenge;
                 console.log("Berechnete Portionsmenge: " + berechneteMenge);
+
+                let ausgabe = "";
+                for (let i = 0; i < ingredients.length; i++) {
+                    if( units[i] === "Stk") {
+                        ausgabe =  ingredients[i] + ": " + quantityPerOne[i] + " " + units[i];
+                    }
+                    else {
+                        ausgabe = ingredients[i] + ": " + quantityPerOne[i] + units[i];
+                    }
+                    console.log(ausgabe);
+                }
             }
         </script>
     </body>
