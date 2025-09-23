@@ -7,6 +7,24 @@
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
     <body>
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <div class="popup-header">
+                <!-- Header-Inhalt hier -->
+                <h2>Allergene <span>(und andere übernatürliche Gefahren):</span></h2>
+                <span class="closeBtn" id="closeBtn">x</span>
+            </div>
+            <div class="popup-content">
+                <ul>
+                    <li><strong>Chili (Stufe: Inferno)</strong> - Kann spontane Feuerspeiendeffekte verursachen.</li>
+                    <li><strong>Ingwer</strong> - Wirkt wie ein Jetpack für deinen Kreislauf. Zündet von innen!</li>
+                    <li><strong>Kokosmilch</strong> - Enthält Kokos. Überraschung! Kann Spuren von Palmenurlaub enthalten.</li>
+                    <li><strong>Knoblauch</strong> - Nicht allergen, aber garantiert vampirresistent.</li>
+                    <li><strong>Mut</strong> - Erforderlich in großen Mengen. Nicht für Zartbeseitete empfohlen.</li>
+                    <li><strong>Drachenenergie (vermutlich Spuren enthalten)</strong> - Nicht offiziell bestätigt, aber... Du wirst es merken.</li>
+                </ul>
+            </div>
+        </div>
         <div class="wrapper">
             <header>
                 <h1>ZutatenZirkus</h1>
@@ -15,7 +33,14 @@
             </header>
             <main>
                 <div class="card">
-                    <h2>Drachenatem-Curry</h2>
+                    <h2>
+                        Drachenatem-Curry
+                        <span
+                            id="info"
+                            title="Mögliche Allergene & Inhaltsstoffe anzeigen"
+                            >&#9432;</span
+                        >
+                    </h2>
                     <div class="card-content">
                         <p>
                             Dieses Curry ist nicht nur für mutige Esser gemacht,

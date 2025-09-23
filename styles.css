@@ -213,6 +213,10 @@ h3 {
   padding: 0;
   width: 100%;
 }
+h2 #info {
+  font-size: 0.5em;
+  cursor: pointer;
+}
 .card {
   background-color: #ff6b35;
   display: flex;
@@ -230,6 +234,108 @@ h3 {
   padding: 1rem;
   width: 95%;
   margin: 1rem auto;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Schwarz mit 50% Transparenz */
+  z-index: 9998;
+  /* Direkt unter dem Popup (9999) */
+  display: none;
+}
+.popup {
+  /* Positionierung mittig im Viewport */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Größe: 50% vom Viewport */
+  width: 55vw;
+  height: 50vh;
+  /* Immer im Vordergrund */
+  z-index: 9999;
+  /* Aussehen */
+  background-color: #fffaec;
+  color: black;
+  border-radius: 10px;
+  /* abgerundete Ecken */
+  /* Optional: Schatten für bessere Sichtbarkeit */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* Layout für die inneren Divs */
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  /* verhindert Überlauf des Inhalts */
+}
+.popup-header {
+  padding: 15px;
+  background-color: #aadcb0;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  /* Flexbox für die Ausrichtung */
+  justify-content: space-between;
+  /* Verteilt Elemente (h2 und closeBtn) */
+  align-items: center;
+  /* Zentriert Elemente vertikal */
+}
+.popup-header h2 {
+  margin: 0;
+  /* Entfernt den Standard-Margin des h2-Elements */
+  color: black;
+  padding-left: 1rem;
+}
+.popup-header h2 span {
+  font-size: 0.6em;
+}
+.popup-content ul {
+  list-style-type: disc;
+  margin-top: 1rem;
+}
+.popup-content ul li {
+  font-size: 0.85em;
+}
+.closeBtn {
+  font-size: 1.25em;
+  /* Etwas kleiner als die Überschrift */
+  color: black;
+  /* Schwarze Farbe */
+  cursor: pointer;
+  /* Zeigt an, dass es klickbar ist */
+  font-weight: bold;
+  /* Optional: macht das X fetter */
+  margin-left: 15px;
+  /* Abstand zum Text der Überschrift */
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+.closeBtn:hover {
+  font-size: 1.5em;
+  /* Größe beim Hover */
+  color: #555;
+  /* Optional: Farbe ändert sich beim Hover */
+}
+.popup-content {
+  padding: 20px;
+  flex: 1;
+  /* nimmt den restlichen verfügbaren Platz ein */
+  overflow-y: auto;
+  /* scrollbar, falls Inhalt zu groß ist */
+}
+html.popup-active {
+  overflow: hidden;
+}
+body.popup-active {
+  /* Behält den Scrollbalken bei */
+  overflow-y: scroll;
+  /* Speichert die aktuelle Scrollposition */
+  position: fixed;
+  width: 100%;
+  top: var(--scroll-position, 0px);
+  /* Speichert die Scrollposition als CSS-Variable */
 }
 .reciepe {
   display: flex;
