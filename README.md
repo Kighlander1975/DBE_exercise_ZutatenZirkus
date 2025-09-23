@@ -196,7 +196,7 @@ Bei der Strukturierung des CSS-Teils legte ich Wert auf eine klare Organisation.
 
 ### JavaScript
 Der JavaScript-Teil stellt das Herzstück der Webseite dar und wuchs mit den implementierten Funktionalitäten stetig an. Die anspruchsvollste Komponente war die Berechnung der Zutatenmengen bei unterschiedlichen Portionsgrößen. Als Ausgangsbasis dienten die Werte der statischen Seite, die für vier Portionen konzipiert waren.
-```JavaScript
+```javascript
 document.addEventListener("DOMContentLoaded", function () {
     const portionsForm = document.getElementById("portionsForm");
 
