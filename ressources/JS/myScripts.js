@@ -66,19 +66,57 @@ function closePopup() {
 function updatePortions() {
     const meinInput = document.getElementById("portions");
     const portionsInput = meinInput.value;
-    // Ingredient arrays
-    const ingredients = [
-        "Huhn",
-        "Currypulver",
-        "Kokosmilch",
-        "Ingwer",
-        "Zwiebel",
-        "Reis",
-        "Zitronensaft",
-        "Chili",
-    ];
-    const units = ["Stk", "g", "ml", "ml", "Stk", "g", "ml", "g"];
-    const quantityPerFour = [1, 10, 250, 2, 1, 200, 20, 0.5];
+    
+    // JSON-Data
+    const ingredientsData = {
+      "ingredients": [
+        {
+          "ingredient": "Huhn",
+          "unit": "Stk",
+          "quantityPerFour": 1
+        },
+        {
+          "ingredient": "Currypulver",
+          "unit": "g",
+          "quantityPerFour": 10
+        },
+        {
+          "ingredient": "Kokosmilch",
+          "unit": "ml",
+          "quantityPerFour": 250
+        },
+        {
+          "ingredient": "Ingwer",
+          "unit": "ml",
+          "quantityPerFour": 2
+        },
+        {
+          "ingredient": "Zwiebel",
+          "unit": "Stk",
+          "quantityPerFour": 1
+        },
+        {
+          "ingredient": "Reis",
+          "unit": "g",
+          "quantityPerFour": 200
+        },
+        {
+          "ingredient": "Zitronensaft",
+          "unit": "ml",
+          "quantityPerFour": 20
+        },
+        {
+          "ingredient": "Chili",
+          "unit": "g",
+          "quantityPerFour": 0.5
+        }
+      ]
+    };
+    
+    // Extract arrays from the JSON structure
+    const ingredients = ingredientsData.ingredients.map(item => item.ingredient);
+    const units = ingredientsData.ingredients.map(item => item.unit);
+    const quantityPerFour = ingredientsData.ingredients.map(item => item.quantityPerFour);
 
     // Check for decimal values
     if (portionsInput.includes(".") || portionsInput.includes(",")) {
@@ -151,7 +189,8 @@ function updatePortions() {
 
                 if (whole === 0) {
                     ausgabe =
-                        fractionSymbol + " " + units[i];
+                        fractionSymbol + " " +
+                        units[i];
                 } else {
                     ausgabe =
                         whole +
